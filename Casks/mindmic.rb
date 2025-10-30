@@ -15,4 +15,21 @@ cask "mindmic" do
     "~/Library/Caches/com.rohitk.Mindmic",
     "~/Library/WebKit/com.rohitk.mindmic",
   ]
+
+  # Post-install information for users
+  caveats <<~EOS
+    #{token} is distributed as an unsigned application to avoid Apple Developer fees.
+
+    IMPORTANT FIRST LAUNCH INSTRUCTIONS:
+    1. After installation, find MindMic in your Applications folder
+    2. Right-click on MindMic.app and select "Open" (don't double-click)
+    3. Click "Open" in the security dialog that appears
+    4. Grant microphone and screen recording permissions when prompted
+
+    This security warning is normal for unsigned apps and doesn't indicate malware.
+    The source code is publicly available for review at #{homepage}.
+
+    For help with installation, visit:
+    https://github.com/rohitctrl/mindmic.app/blob/main/INSTALLATION.md
+  EOS
 end
