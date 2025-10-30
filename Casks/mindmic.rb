@@ -2,10 +2,10 @@ cask "mindmic" do
   version "2.0"
   sha256 "bc14c14202f2581758d0bb33da4ed063b78a116b72961822742a02eb22f68241"  # Will be updated with actual SHA256 during release
 
-  url "https://github.com/rohit1906/mind-mic/releases/download/v#{version}/MindMic-#{version}-unsigned.dmg"
+  url "https://github.com/rohitctrl/mindmic.app/releases/download/v#{version}/MindMic-#{version}-unsigned.dmg"
   name "MindMic"
   desc "AI-powered voice transcription and enhancement application"
-  homepage "https://github.com/rohit1906/mind-mic"
+  homepage "https://github.com/rohitctrl/mindmic.app"
 
   app "MindMic.app"
 
