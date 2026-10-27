@@ -1,6 +1,6 @@
 cask "mindmic" do
-  version "2.0"
-  sha256 "bc14c14202f2581758d0bb33da4ed063b78a116b72961822742a02eb22f68241"  # Will be updated with actual SHA256 during release
+  version "2.0.0"
+  sha256 "8b041883df353e707c9ba267974681ff50512e27b576f27d8eceabeef1f9198a"  # Will be updated with actual SHA256 during release
 
   url "https://github.com/rohitctrl/mindmic.app/releases/download/v#{version}/MindMic-#{version}-unsigned.dmg"
   name "MindMic"
