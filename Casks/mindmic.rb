@@ -1,13 +1,13 @@
 cask "mindmic" do
-  version "2.0.0"
-  sha256 "8b041883df353e707c9ba267974681ff50512e27b576f27d8eceabeef1f9198a"  # Will be updated with actual SHA256 during release
+  version "2.0.4"
+  sha256 "eac90d1f1bafe27caa942e7eb23517e346c647d7321d3b1d3ecf4bc979b19a86"
 
-  url "https://github.com/rohitctrl/mindmic.app/releases/download/v#{version}/MindMic-#{version}-unsigned.dmg"
+  url "https://github.com/rohitctrl/mindmic.app/releases/download/v#{version}/mindmic.dmg"
   name "MindMic"
   desc "AI-powered voice transcription and enhancement application"
   homepage "https://github.com/rohitctrl/mindmic.app"
 
-  app "MindMic.app"
+  app "MindMic v#{version}/mindmic.app", target: "MindMic.app"
 
   zap trash: [
     "~/Library/Application Support/com.rohitk.mindmic",
