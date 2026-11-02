@@ -11,7 +11,16 @@ AI-powered voice transcription and enhancement application.
 #### Installation
 
 ```bash
+brew install --cask rohitctrl/tap/mindmic
+```
+
+This one command taps this repository, trusts the cask and installs MindMic. Homebrew 6.0.0 and newer require explicit trust for third-party taps; installing with the full tap name grants trust for this cask only.
+
+If you prefer to tap first, then install:
+
+```bash
 brew tap rohitctrl/homebrew-tap
+brew trust --cask rohitctrl/tap/mindmic
 brew install --cask mindmic
 ```
 
