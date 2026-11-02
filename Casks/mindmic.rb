@@ -7,7 +7,7 @@ cask "mindmic" do
   desc "AI-powered voice transcription and enhancement application"
   homepage "https://github.com/rohitctrl/mindmic.app"
 
-  app "MindMic v#{version}/mindmic.app", target: "MindMic.app"
+  app "mindmic.app", target: "MindMic.app"
 
   zap trash: [
     "~/Library/Application Support/com.rohitk.mindmic",
