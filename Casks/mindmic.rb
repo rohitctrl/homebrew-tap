@@ -1,13 +1,16 @@
 cask "mindmic" do
-  version "2.0.4"
-  sha256 "eac90d1f1bafe27caa942e7eb23517e346c647d7321d3b1d3ecf4bc979b19a86"
+  version "2.0.5"
+  sha256 "a640d7c5cda8c5d40697a25e28ab9f3f16bdd63d954808a6c7e3c9e012a7548f"
 
-  url "https://github.com/rohitctrl/mindmic.app/releases/download/v#{version}/mindmic.dmg"
+  url "https://github.com/rohitctrl/mindmic.app/releases/download/v2.0.5/MindMic-2.0.5-unsigned.dmg"
   name "MindMic"
-  desc "AI-powered voice transcription and enhancement application"
+  desc "AI-powered voice transcription and enhancement"
   homepage "https://github.com/rohitctrl/mindmic.app"
 
-  app "mindmic.app", target: "MindMic.app"
+  depends_on arch: :arm64
+  depends_on macos: ">= :sonoma"
+
+  app "MindMic.app"
 
   zap trash: [
     "~/Library/Application Support/com.rohitk.mindmic",
@@ -16,20 +19,12 @@ cask "mindmic" do
     "~/Library/WebKit/com.rohitk.mindmic",
   ]
 
-  # Post-install information for users
   caveats <<~EOS
-    #{token} is distributed as an unsigned application to avoid Apple Developer fees.
+    MindMic is free and ad-hoc signed, without Apple notarization.
+    On first launch, open MindMic, then go to System Settings > Privacy & Security
+    and click Open Anyway. Grant microphone access when prompted.
 
-    IMPORTANT FIRST LAUNCH INSTRUCTIONS:
-    1. After installation, find MindMic in your Applications folder
-    2. Right-click on MindMic.app and select "Open" (don't double-click)
-    3. Click "Open" in the security dialog that appears
-    4. Grant microphone and screen recording permissions when prompted
-
-    This security warning is normal for unsigned apps and doesn't indicate malware.
-    The source code is publicly available for review at #{homepage}.
-
-    For help with installation, visit:
-    https://github.com/rohitctrl/mindmic.app/blob/main/INSTALLATION.md
+    A "contains malware" or "damaged" message is not the expected approval prompt.
+    Report it at https://github.com/rohitctrl/mindmic.app/issues.
   EOS
 end

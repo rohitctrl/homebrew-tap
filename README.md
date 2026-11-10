@@ -1,64 +1,18 @@
-# rohitctrl's Homebrew Tap
+# MindMic Homebrew tap
 
-This repository contains Homebrew formulae for macOS applications that aren't available in Homebrew core.
-
-## Available Formulae
-
-### MindMic
-
-AI-powered voice transcription and enhancement application.
-
-#### Installation
+Free voice transcription for Apple Silicon Macs (M1 or newer), macOS 14 or later.
 
 ```bash
 brew install --cask rohitctrl/tap/mindmic
 ```
 
-This one command taps this repository, trusts the cask and installs MindMic. Homebrew 6.0.0 and newer require explicit trust for third-party taps; installing with the full tap name grants trust for this cask only.
+On first launch, open MindMic, then go to **System Settings > Privacy & Security > Open Anyway**.
+MindMic is ad-hoc signed and not notarized by Apple. Grant microphone access when prompted.
+A "contains malware" or "damaged" alert is not the expected approval prompt; report it.
 
-If you prefer to tap first, then install:
+To upgrade, run `brew update` then `brew upgrade --cask rohitctrl/tap/mindmic`.
+If macOS moved an old copy to the Bin, use `brew reinstall --cask rohitctrl/tap/mindmic`.
 
-```bash
-brew tap rohitctrl/homebrew-tap
-brew trust --cask rohitctrl/tap/mindmic
-brew install --cask mindmic
-```
-
-#### Usage
-
-After installation, you can launch MindMic from your Applications folder or via Spotlight search.
-
-**Important:** MindMic is distributed as an unsigned application. On first launch, you'll need to:
-
-1. Right-click on MindMic.app in Finder
-2. Select "Open" from the context menu
-3. Click "Open" in the security dialog that appears
-4. Grant microphone and screen recording permissions when prompted
-
-#### Update
-
-```bash
-brew upgrade --cask mindmic
-```
-
-#### Uninstall
-
-```bash
-brew uninstall --cask mindmic
-```
-
-## About Unsigned Applications
-
-This tap distributes unsigned applications to avoid the Apple Developer Program fee. While this makes the software freely available, it means:
-
-- macOS will show security warnings on first launch
-- You must manually grant permissions to the application
-- Updates must be installed manually via Homebrew
-
-These warnings are normal and don't indicate malicious software. The source code is publicly available for review.
-
-## Support
-
-For issues with MindMic itself, please visit the [main repository](https://github.com/rohit1906/mind-mic).
-
-For issues with this Homebrew formula, please [file an issue](https://github.com/rohitctrl/homebrew-tap/issues).
+[Installation guide](https://github.com/rohitctrl/mindmic.app/blob/main/INSTALLATION.md)
+· [Report an app problem](https://github.com/rohitctrl/mindmic.app/issues)
+· [Report a cask problem](https://github.com/rohitctrl/homebrew-tap/issues)
